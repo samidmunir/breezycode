@@ -17,3 +17,5 @@ struct Singly_Linkedlist_Node {
 };
 
 struct Singly_Linkedlist* initialize_singly_linkedlist();
+
+bool is_empty(struct Singly_Linkedlist*);

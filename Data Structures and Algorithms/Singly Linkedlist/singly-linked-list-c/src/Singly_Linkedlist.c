@@ -9,6 +9,14 @@
 #include <unistd.h>
 #include "Singly_Linkedlist.h"
 
+bool is_empty(struct Singly_Linkedlist* linkedlist) {
+    if (linkedlist -> head == NULL || linkedlist -> number_of_elements == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 struct Singly_Linkedlist* initialize_singly_linkedlist() {
     printf("\ninitialize_singly_linkedlist() called -->\n");
     
