@@ -20,7 +20,7 @@ bool is_empty(struct Singly_Linkedlist* linkedlist) {
 }
 
 void print_singly_linkedlist_stats(struct Singly_Linkedlist* linkedlist) {
-    printf("\t\t --> # elements: %d\n\t\t --> memory used: %d\n", linkedlist -> number_of_elements, linkedlist -> memory_used);
+    printf("\t\t --> # elements: %d\n\t\t --> memory used: %d bytes\n", linkedlist -> number_of_elements, linkedlist -> memory_used);
 }
 
 void print_singly_linkedlist(struct Singly_Linkedlist* linkedlist) {
