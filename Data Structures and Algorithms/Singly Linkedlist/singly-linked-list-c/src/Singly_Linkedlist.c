@@ -1,6 +1,8 @@
 /*
     Singly Linkedlist (C implementation)
     - Singly_Linkedlist.c
+    - Singly_Linkedlist.h
+    - Main.c
 */
 
 #include <stdio.h>
@@ -17,6 +19,10 @@ bool is_empty(struct Singly_Linkedlist* linkedlist) {
     }
 }
 
+void print_singly_linkedlist_stats(struct Singly_Linkedlist* linkedlist) {
+    printf("\t\t --> # elements: %d\n\t\t --> memory used: %d\n", linkedlist -> number_of_elements, linkedlist -> memory_used);
+}
+
 void print_singly_linkedlist(struct Singly_Linkedlist* linkedlist) {
     printf("\t\tSINGLY_LINKEDLIST -->");
     if (is_empty(linkedlist)) {
@@ -31,6 +37,7 @@ void print_singly_linkedlist(struct Singly_Linkedlist* linkedlist) {
         }
         printf("NULL\n");
     }
+    print_singly_linkedlist_stats(linkedlist);
 }
 
 struct Singly_Linkedlist* initialize_singly_linkedlist() {
