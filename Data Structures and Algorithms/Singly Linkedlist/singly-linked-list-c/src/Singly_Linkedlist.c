@@ -40,6 +40,28 @@ void print_singly_linkedlist(struct Singly_Linkedlist* linkedlist) {
     print_singly_linkedlist_stats(linkedlist);
 }
 
+struct Singly_Linkedlist* insert_head(struct Singly_Linkedlist* linkedlist, int data) {
+    printf("\ninsert_head(%d) called -->\n", data);
+
+    if (linkedlist -> head != NULL && linkedlist -> number_of_elements == 0) {
+        linkedlist -> head -> data = data;
+        linkedlist -> head -> next = NULL;
+        linkedlist -> number_of_elements = 1;
+        linkedlist -> memory_used = linkedlist -> number_of_elements * sizeof(struct Singly_Linkedlist_Node);
+    } else {
+        struct Singly_Linkedlist_Node* new_head_node = (struct Singly_Linkedlist_Node*) malloc(sizeof(struct Singly_Linkedlist_Node*));
+        new_head_node -> data = data;
+        new_head_node -> next = linkedlist -> head;
+        linkedlist -> head = new_head_node;
+        linkedlist -> number_of_elements++;
+        linkedlist -> memory_used = linkedlist -> number_of_elements * sizeof(struct Singly_Linkedlist_Node);
+    }
+
+    print_singly_linkedlist(linkedlist);
+
+    return linkedlist;
+}
+
 struct Singly_Linkedlist* initialize_singly_linkedlist() {
     printf("\ninitialize_singly_linkedlist() called -->\n");
     

@@ -25,3 +25,5 @@ bool is_empty(struct Singly_Linkedlist*);
 void print_singly_linkedlist(struct Singly_Linkedlist*);
 
 void print_singly_linkedlist_stats(struct Singly_Linkedlist*);
+
+struct Singly_Linkedlist* insert_head(struct Singly_Linkedlist*, int data);
