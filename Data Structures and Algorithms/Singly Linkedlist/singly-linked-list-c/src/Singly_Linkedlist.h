@@ -19,3 +19,5 @@ struct Singly_Linkedlist_Node {
 struct Singly_Linkedlist* initialize_singly_linkedlist();
 
 bool is_empty(struct Singly_Linkedlist*);
+
+void print_singly_linkedlist(struct Singly_Linkedlist*);

@@ -17,6 +17,22 @@ bool is_empty(struct Singly_Linkedlist* linkedlist) {
     }
 }
 
+void print_singly_linkedlist(struct Singly_Linkedlist* linkedlist) {
+    printf("\t\tSINGLY_LINKEDLIST -->");
+    if (is_empty(linkedlist)) {
+        printf(" (EMPTY)\n");
+        printf("\t\tHEAD -> NULL\n");
+    } else {
+        printf("\n\t\tHEAD -> ");
+        struct Singly_Linkedlist_Node *current_node = linkedlist -> head;
+        while (current_node != NULL) {
+            printf("%d -> ", current_node -> data);
+            current_node = current_node -> next;
+        }
+        printf("NULL\n");
+    }
+}
+
 struct Singly_Linkedlist* initialize_singly_linkedlist() {
     printf("\ninitialize_singly_linkedlist() called -->\n");
     
@@ -45,6 +61,8 @@ struct Singly_Linkedlist* initialize_singly_linkedlist() {
     linkedlist -> number_of_elements = 0;
     linkedlist -> memory_used = linkedlist -> number_of_elements * sizeof(struct Singly_Linkedlist_Node);
     printf("\tsingly_linkedlist structure successfully initialized...\n");
+
+    print_singly_linkedlist(linkedlist);
 
     return linkedlist;
 }
