@@ -62,6 +62,33 @@ struct Singly_Linkedlist* insert_head(struct Singly_Linkedlist* linkedlist, int 
     return linkedlist;
 }
 
+struct Singly_Linkedlist* remove_head(struct Singly_Linkedlist* linkedlist) {
+    printf("\nremove_head() called -->\n");
+    if (is_empty(linkedlist)) {
+        printf("\t***ERROR***: cannot remove from empty/null linkedlist.\n");
+        print_singly_linkedlist(linkedlist);
+        return linkedlist;
+    }
+    
+    if (linkedlist -> head -> next == NULL) {
+        int popped_item = linkedlist -> head -> data;
+        linkedlist -> head = NULL;
+        linkedlist -> number_of_elements = 0;
+        linkedlist -> memory_used = linkedlist -> number_of_elements * sizeof(struct Singly_Linkedlist_Node);
+        printf("\tremoving element %d.\n", popped_item);
+        print_singly_linkedlist(linkedlist);
+        return linkedlist;
+    } else {
+        int popped_item = linkedlist -> head -> data;
+        linkedlist -> head = linkedlist -> head -> next;
+        linkedlist -> number_of_elements--;
+        linkedlist -> memory_used = linkedlist -> number_of_elements * sizeof(struct Singly_Linkedlist_Node);
+        printf("\tremoving element %d.\n", popped_item);
+        print_singly_linkedlist(linkedlist);
+        return linkedlist;
+    }
+}
+
 struct Singly_Linkedlist* initialize_singly_linkedlist() {
     printf("\ninitialize_singly_linkedlist() called -->\n");
     

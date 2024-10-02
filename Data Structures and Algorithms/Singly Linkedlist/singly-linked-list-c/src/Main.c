@@ -26,5 +26,14 @@ int main(int argc, char* argv[]) {
     linkedlist = insert_head(linkedlist, 7);
     linkedlist = insert_head(linkedlist, 92);
 
+    /*
+        testing function remove_head()
+    */
+    linkedlist = remove_head(linkedlist);
+    linkedlist = remove_head(linkedlist);
+    linkedlist = remove_head(linkedlist);
+    linkedlist = remove_head(linkedlist);
+    linkedlist = remove_head(linkedlist); // RETURN ERROR EXPECTED (EMPTY/NULL LINKEDLIST)
+
     return EXIT_SUCCESS;
 }
