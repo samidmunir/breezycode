@@ -3,9 +3,17 @@
     - Singly_Linkedlist.h
 */
 
-struct SinglyLinkedListNode {
-    int data;
-    struct SinglyLinkedlistNode* next;
-} *head;
+#include <stdbool.h>
 
-struct SinglyLinkedlistNode* initialize_singly_linked_list();
+struct Singly_Linkedlist {
+    struct Singly_Linkedlist_Node *head;
+    int number_of_elements;
+    int memory_used;
+};
+
+struct Singly_Linkedlist_Node {
+    int data;
+    struct Singly_Linkedlist_Node* next;
+};
+
+struct Singly_Linkedlist* initialize_singly_linkedlist();

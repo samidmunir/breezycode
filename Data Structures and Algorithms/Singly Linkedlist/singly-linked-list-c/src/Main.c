@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
     printf("\nSingly Linkedlist (C implementation)\n");
     printf("------------------------------------\n");
 
-    struct SinglyLinkedlistNode* head = initialize_singly_linked_list();
+    struct Singly_Linkedlist* linkedlist = initialize_singly_linkedlist();
 
     return EXIT_SUCCESS;
 }
