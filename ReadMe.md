@@ -3,3 +3,5 @@ Sami Munir | sami.munir2001@gmail.com | Rutgers University
 ## Data Structures and Algorithms
 ### Singly Linkedlist
 * singly-linked-list-c
+## Leetcode Mastery 2025
+* 2404. Most Frequent Event Element
