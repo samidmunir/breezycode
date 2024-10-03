@@ -1,0 +1,77 @@
+.Navbar {
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  opacity: 0.75;
+  transition: all 0.3s linear;
+}
+
+.Navbar:hover {
+  opacity: 1;
+}
+
+.navbar-title {
+  font-size: 48px;
+}
+
+.navbar-items {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-item {
+  margin: 0 10px;
+  font-size: 18px;
+  background-color: #141619;
+  border-radius: 15px;
+  color: #b3b4bd;
+  padding: 5px 10px;
+  opacity: 0.75;
+  transition: all 0.3s linear;
+}
+
+.navbar-item:hover {
+  color: #141619;
+  background-color: #b3b4bd;
+}
+
+.navbar-item-icon {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.navbar-profile-status-con {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-profile-status-message {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.navbar-profile-status-button {
+  font-size: 18px;
+  outline: none;
+  border: none;
+  margin: 0 10px;
+  font-size: 18px;
+  background-color: #141619;
+  border-radius: 15px;
+  color: #b3b4bd;
+  padding: 5px 10px;
+  transition: all 0.3s linear;
+}
+
+.navbar-profile-status-button:hover {
+  color: #141619;
+  background-color: #b3b4bd;
+  opacity: 0.75;
+}
+
+.navbar-profile-status-button-icon {
+  margin-left: 5px;
+  vertical-align: middle;
+}

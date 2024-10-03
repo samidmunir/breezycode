@@ -1,0 +1,38 @@
+/* 
+  Color pallete
+  - #141619
+  - #2C2E3A
+  - #050A44
+  - #0A21C0
+  - #B3B4BD
+ */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Ubuntu+Condensed&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+body {
+  background-color: #b3b4bd;
+}
+
+.ubuntu-condensed-regular {
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
