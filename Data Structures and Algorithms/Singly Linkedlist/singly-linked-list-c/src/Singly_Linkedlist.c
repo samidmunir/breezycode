@@ -25,6 +25,7 @@ void print_singly_linkedlist_stats(struct Singly_Linkedlist* linkedlist) {
 
 void print_singly_linkedlist(struct Singly_Linkedlist* linkedlist) {
     printf("\t\tSINGLY_LINKEDLIST -->");
+
     if (is_empty(linkedlist)) {
         printf(" (EMPTY)\n");
         printf("\t\tHEAD -> NULL\n");
@@ -37,6 +38,7 @@ void print_singly_linkedlist(struct Singly_Linkedlist* linkedlist) {
         }
         printf("NULL\n");
     }
+
     print_singly_linkedlist_stats(linkedlist);
 }
 
@@ -64,12 +66,13 @@ struct Singly_Linkedlist* insert_head(struct Singly_Linkedlist* linkedlist, int 
 
 struct Singly_Linkedlist* remove_head(struct Singly_Linkedlist* linkedlist) {
     printf("\nremove_head() called -->\n");
+
     if (is_empty(linkedlist)) {
         printf("\t***ERROR***: cannot remove from empty/null linkedlist.\n");
         print_singly_linkedlist(linkedlist);
         return linkedlist;
     }
-    
+
     if (linkedlist -> head -> next == NULL) {
         int popped_item = linkedlist -> head -> data;
         linkedlist -> head = NULL;
@@ -98,10 +101,23 @@ struct Singly_Linkedlist* insert_tail(struct Singly_Linkedlist* linkedlist, int 
         linkedlist -> number_of_elements = 1;
         linkedlist -> memory_used = linkedlist -> number_of_elements * sizeof(struct Singly_Linkedlist_Node);
     } else {
+        struct Singly_Linkedlist_Node* temp_head = linkedlist -> head;
+        
         struct Singly_Linkedlist_Node* new_head_node = (struct Singly_Linkedlist_Node*) malloc(sizeof(struct Singly_Linkedlist_Node*));
         new_head_node -> data = data;
         new_head_node -> next = NULL;
-        linkedlist -> head = new_head_node;
+
+        struct Singly_Linkedlist_Node* current_node = temp_head;
+        while (current_node != NULL) {
+            if (current_node -> next == NULL) {
+                break;
+            }
+            current_node = current_node -> next;
+        }
+        
+        current_node -> next = new_head_node;
+        
+        linkedlist -> head = temp_head;
         linkedlist -> number_of_elements++;
         linkedlist -> memory_used = linkedlist -> number_of_elements * sizeof(struct Singly_Linkedlist_Node);
     }
@@ -138,6 +154,7 @@ struct Singly_Linkedlist* initialize_singly_linkedlist() {
     linkedlist -> head = head;
     linkedlist -> number_of_elements = 0;
     linkedlist -> memory_used = linkedlist -> number_of_elements * sizeof(struct Singly_Linkedlist_Node);
+    
     printf("\tsingly_linkedlist structure successfully initialized...\n");
 
     print_singly_linkedlist(linkedlist);

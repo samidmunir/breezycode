@@ -39,7 +39,10 @@ int main(int argc, char* argv[]) {
         testing function insert_tail()
     */
     linkedlist = initialize_singly_linkedlist();
-    linkedlist = insert_tail(linkedlist, 0);
+    linkedlist = insert_tail(linkedlist, 4);
+    linkedlist = insert_tail(linkedlist, 16);
+    linkedlist = insert_tail(linkedlist, 7);
+    linkedlist = insert_tail(linkedlist, 92);
 
     return EXIT_SUCCESS;
 }
