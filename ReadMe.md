@@ -14,6 +14,8 @@ Sami Munir | sami.munir2001@gmail.com | Rutgers University
 
 ## Projects
 
+- Airline Manager
+
 ## Tutorials
 
 - Flask Tutorial: Tech with Tim
