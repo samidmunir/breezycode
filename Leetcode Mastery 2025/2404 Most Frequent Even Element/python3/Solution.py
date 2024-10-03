@@ -20,6 +20,12 @@ Example 3:
     output: -1
 """
 
+"""
+Submission Analysis
+    Runtime: 217 ms
+    Memory: 17.19 MB
+"""
+
 from collections import defaultdict
 from typing import List
 
@@ -34,7 +40,6 @@ class Solution:
                 if nums_count_map[num] > nums_count_map[most_freq_num] or (nums_count_map[num] == nums_count_map[most_freq_num] and num < most_freq_num):
                     most_freq_num = num
         return most_freq_num
-            
 
     # Example 1
     print('\nExample 1)')
